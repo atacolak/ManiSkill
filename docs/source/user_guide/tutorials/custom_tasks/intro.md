@@ -160,7 +160,7 @@ import torch
 class PushCubeEnv(BaseEnv):
     # ...
     def _initialize_episode(self, env_idx: torch.Tensor, options: dict):
-        # useing torch.device context manager to auto create tensors 
+        # using torch.device context manager to auto create tensors 
         # on CPU/CUDA depending on self.device, the device the env runs on
         with torch.device(self.device):
             b = len(env_idx)
